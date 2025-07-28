@@ -22,7 +22,7 @@ Content-Type: application/json
   "password": "supersecreta"
 }
 
-# 🔐 ⚠️ Copia el access_token del resultado y pégalo abajo
+# 🔐 ⚠️ Copia el access_token del resultado y pégalo arriba en access_token
 
 ###
 

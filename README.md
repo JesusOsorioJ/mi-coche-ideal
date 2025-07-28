@@ -92,7 +92,11 @@ o con reporte visual:
 go test ./... -coverprofile=coverage.out && go tool cover -html=coverage.out
 ```
 
-Objetivo de cobertura: **>70%**. Las pruebas cubren autenticación, gestión de vehículos y órdenes.
+📈 **Objetivo de cobertura:** mayor al **70%**  
+Las pruebas cubren los módulos de **autenticación**, **gestión de vehículos** y **órdenes**.
+
+> ⚠️ **Importante:**  
+> Si levanta la base de datos con Docker, asegúrate de ajustar la variable de entorno del **host de la base de datos** a `localhost` **antes de ejecutar los tests**.
 
 ### Pruebas manuales
 
