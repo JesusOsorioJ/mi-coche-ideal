@@ -1,0 +1,43 @@
+# Binaries
+/main
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Build output
+/build/
+*.out
+
+# Go test coverage files
+coverage.*
+*.test
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# Dependency directories (vendor if you use vendoring)
+vendor/
+
+# Logs
+*.log
+
+# Env files (mantén solo el .env.example en Git)
+.env
+
+# Docker
+*.pid
+*.tar
+*.bak
+
+# Node-style ignore
+node_modules/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# GoLand files
+*.iml

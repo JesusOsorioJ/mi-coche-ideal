@@ -1,0 +1,88 @@
+
+@access_token = # Copia aquí el access_token obtenido del login
+
+### 🔐 Registro de usuario
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Jesus Osorio",
+  "email": "jesus@example.com",
+  "password": "supersecreta"
+}
+
+###
+
+### 🔐 Login de usuario
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "jesus@example.com",
+  "password": "supersecreta"
+}
+
+# 🔐 ⚠️ Copia el access_token del resultado y pégalo abajo
+
+###
+
+### 🚗 Crear vehículo
+POST http://localhost:3000/api/vehicles
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "brand": "Mazda",
+  "model": "3",
+  "year": 2021,
+  "price": 18900,
+  "kilometers": 25000,
+  "main_photo": "https://example.com/mazda.jpg",
+  "description": "Mazda en excelente estado"
+}
+
+###
+
+### 🚗 Listar vehículos
+GET http://localhost:3000/api/vehicles?brand=Mazda
+Authorization: Bearer {{access_token}}
+
+###
+
+### 🧾 Crear orden de venta
+POST http://localhost:3000/api/orders
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "vehicle_id": 1,
+  "total_price": 18900
+}
+
+
+### 🧾 Obtener orden de venta
+GET http://localhost:3000/api/orders
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+###
+
+### 🧾 Cambiar estado de orden
+PUT http://localhost:3000/api/orders/1/status
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "status": "pagada"
+}
+
+###
+
+### 📊 Health Check
+GET http://localhost:3000/healthz
+
+###
+
+### 📈 Métricas Prometheus
+GET http://localhost:3000/metrics
+
